@@ -289,7 +289,7 @@ class UffizziCore::DeploymentService
           envs.push('name' => 'PORT', 'value' => container.target_port.to_s)
         end
 
-        envs.push("name" => "UFFIZZI_URL", "value" => "https://#{deployment.preview_url}")
+        envs.push('name' => 'UFFIZZI_URL', 'value' => "https://#{deployment.preview_url}")
 
         container.variables = [] if container.variables.nil?
 
